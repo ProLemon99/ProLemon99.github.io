@@ -1,0 +1,148 @@
+html, body {
+    background-color: #1e1e1e !important;
+    margin: 0;
+}
+
+ul {
+    gap: 10px;
+}
+
+li:hover {
+    animation-fill-mode: both;
+}
+
+
+nav.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+#img:hover {
+    transform: translateY(-20px);
+}
+
+    .title {
+        color: white;
+        justify-content: center;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .scrolling-text-container {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        overflow: hidden;
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+
+    .scrolling-text-inner {
+        display: flex;
+        white-space: nowrap;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 0;
+        width: fit-content;
+        max-width: 1250px;
+    }
+
+    .scrolling-text {
+        display: flex;
+    }
+
+    .scrolling-text-item {
+        padding: 0 30px;
+    }
+
+    .scrolling-text-inner > div {
+        animation: var(--direction) var(--marquee-speed) linear infinite;
+    }
+
+    .scrolling-text-container:hover .scrolling-text-inner > div {
+        animation-play-state: paused;
+    }
+
+
+    @keyframes scroll-right {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    .about-section {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+    #border {
+        margin-top: 100px;
+        border: 2px solid white;
+        border-radius: 50px;
+        display: inline-block;
+        padding: 20px;
+    }
+
+    .contacts-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        gap: 10px;
+    }
+
+    .contacts-section a {
+        font-size: 30px; 
+        color: white; 
+        text-decoration: none;
+    }
+
+    .contacts-section a:hover {
+        color: gray;
+    }
+
+    .certifications-section h2 {
+        padding: 50px;
+        color: white;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        display: flex;
+        padding: 50px;
+        gap: 50px;
+        position: relative;
+        z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+        .cards {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
